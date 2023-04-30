@@ -1,0 +1,30 @@
+PROCEDURE saisie(VAR t:ARRAY_OF INTEGER  )
+VAR
+    i:INTEGER:=0
+
+
+BEGIN
+    FOR  i FROM 0 TO n-1 DO
+    REPEAT
+        read(t[i])
+    UNTIL(t[i]<>NULL)
+    END_FOR
+END
+
+ALGORITHM algorithm_name
+VAR
+    i,j,extrac:INTEGER:=0;
+    tab=ARRAY_OF INTEGER;
+
+
+BEGIN
+    saisie(tab);
+    FOR i FROM 1 TO n-1 STEP 1  DO
+        j=i-1;
+    WHILE (j>0 && (tab[j]>tab[i])) DO
+    swap(tab[j],tab[j+1]);
+        j=j-1;
+    END_WHILE
+     END_FOR
+     write("show the tab",tab[i]);
+END
